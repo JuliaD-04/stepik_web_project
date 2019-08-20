@@ -1,6 +1,16 @@
                                                    
+def app(environ, start_response):
+    start_response('200 OK', [('Content-Type', 'text/plain')])
+    return ["Hello!"]
 
-# def application(environ, start_response):
+    # return [bytes('\r\n'.join(environ['QUERY_STRING'].split('&')),
+    #               encoding="utf8")]
+
+
+
+
+
+    # def application(environ, start_response):
                                                           
 		
 # 	status = '200 OK'
@@ -12,7 +22,3 @@
 # 	start_response(status, response_headers)                                    
 
 # 	return [body]
-def app(environ, start_response):
-    start_response('200 OK', [('Content-Type', 'text/plain')])
-    return [bytes('\r\n'.join(environ['QUERY_STRING'].split('&')),
-                  encoding="utf8")]
